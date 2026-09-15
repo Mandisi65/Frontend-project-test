@@ -11,6 +11,5 @@ export const getPopularMovies = async () => {
 export const searchMovies = async (query) => {
     const response = await fetch(`${BASE_URL}/search/movie?&query=${encodeURIComponent(query)}`);
     const data = await response.json();
-
     return data.results;
 }
